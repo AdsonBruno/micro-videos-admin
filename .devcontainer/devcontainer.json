@@ -37,7 +37,8 @@
 				"christian-kohler.npm-intellisense"
 			]
 		}
-	}
+	},
+	"mounts": ["source=${env:HOME}/.ssh,target=/home/node/.ssh,type=bind"]
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
