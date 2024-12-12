@@ -30,4 +30,9 @@ export class Category {
     static create(props: CategoryCreateCommand): Category {
         return new Category(props);
     }
+
+    changeName(name: string): void {
+        this.name = name
+    }
+
 }
