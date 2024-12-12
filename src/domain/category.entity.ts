@@ -3,7 +3,13 @@ export type CategoryConstructorProps = {
     name: string;
     description?: string | null;
     is_active?: boolean;
-    created_at: Date;
+    created_at?: Date;
+}
+
+export type CategoryCreateCommand = {
+    name: string;
+    description?: string | null;
+    is_active?: boolean;
 }
 
 export class Category {
@@ -21,4 +27,7 @@ export class Category {
         this.created_at = props.created_at ?? new Date();
     }
 
+    static create(props: CategoryCreateCommand): Category {
+        return new Category(props);
+    }
 }
