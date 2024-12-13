@@ -40,6 +40,10 @@ export class Category {
     }
 
     activate() {
-        this.is_active;
+        this.is_active = true;
+    }
+
+    deactivate() {
+        this.is_active = false;
     }
 }
