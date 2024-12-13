@@ -35,4 +35,7 @@ export class Category {
         this.name = name
     }
 
+    changeDescription(description: string): void {
+        this.description = description;
+    }
 }
