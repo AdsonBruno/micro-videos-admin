@@ -38,4 +38,8 @@ export class Category {
     changeDescription(description: string): void {
         this.description = description;
     }
+
+    activate() {
+        this.is_active;
+    }
 }
