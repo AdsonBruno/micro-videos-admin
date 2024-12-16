@@ -80,6 +80,16 @@ describe('Category Unit Tests', () => {
             expect(category.is_active).toBe(false);
             expect(category.created_at).toBeInstanceOf(Date);
         });
+
+        test('should change name', () => {
+            const category = new Category({
+                name: 'Movie',
+            });
+            
+            category.changeName('other name');
+
+            expect(category.name).toBe('other name');
+        });
     });
     
 })
