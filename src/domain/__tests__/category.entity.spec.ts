@@ -98,7 +98,16 @@ describe('Category Unit Tests', () => {
 
             category.changeDescription('some description');
             expect(category.description).toBe('some description');
+        });
 
+        test('should active a category', () => {
+            const category = new Category({
+                name: 'Filmes',
+                is_active: false,
+            });
+
+            category.activate()
+            expect(category.is_active).toBe(true);
         });
     });
     
