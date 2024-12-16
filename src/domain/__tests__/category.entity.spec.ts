@@ -101,13 +101,23 @@ describe('Category Unit Tests', () => {
         });
 
         test('should active a category', () => {
-            const category = new Category({
+            const category = Category.create({
                 name: 'Filmes',
                 is_active: false,
             });
 
             category.activate()
             expect(category.is_active).toBe(true);
+        });
+
+        test('should disable a category', () => {
+            const category = Category.create({
+                name: 'Filmes',
+                is_active: true,
+            });
+
+            category.deactivate()
+            expect(category.is_active).toBe(false);
         });
     });
     
