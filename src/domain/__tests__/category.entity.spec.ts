@@ -90,6 +90,16 @@ describe('Category Unit Tests', () => {
 
             expect(category.name).toBe('other name');
         });
+
+        test('should change description', () => {
+            const category = new Category({
+                name: 'Movie',
+            });
+
+            category.changeDescription('some description');
+            expect(category.description).toBe('some description');
+
+        });
     });
     
 })
