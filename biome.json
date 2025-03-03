@@ -1,0 +1,7 @@
+{
+  "linter": {
+    "rules": {
+       "no-explicit-any": "off"
+    }
+  }
+}
